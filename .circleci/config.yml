@@ -34,7 +34,7 @@ jobs:
       - run: sudo apt-get update && sudo apt-get dist-upgrade
       - run: sudo apt-get install mysql-client
       # Create database
-      - run:  mysql -h 127.0.0.1 -u root -e "create database ecommerce_api"
+      - run:  mysql -h 127.0.0.1 -u root -e "create database ecommerce_api" --ssl-mode=DISABLED
       - restore_cache:
           keys:
             - v1-dependencies-{{ checksum "pom.xml" }}
