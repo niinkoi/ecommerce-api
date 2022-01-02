@@ -18,5 +18,4 @@ public class Member extends AbstractPersistable<Long> {
    @Column(name = "name")
    private String name;
 
-
 }
